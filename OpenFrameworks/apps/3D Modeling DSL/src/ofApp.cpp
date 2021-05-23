@@ -28,12 +28,6 @@ void ofApp::setup()
 
 	//Creating material
 	whiteDiffuse.setDiffuseColor(ofColor::white);
-
-	//Load the fox model
-	fox.loadModel("fox.obj");
-	fox.setRotation(0, 180, 1, 0, 0);
-	fox.setScale(0.4, 0.4, 0.4);
-	fox.setPosition(-150.0f, -40.0f, 0.0f);
 }
 
 void ofApp::update()
@@ -46,7 +40,6 @@ void ofApp::draw()
 	easyCam.begin();
 	whiteDiffuse.begin();
 	box.draw();
-	fox.drawFaces();
 	whiteDiffuse.end();
 	easyCam.end();
 }

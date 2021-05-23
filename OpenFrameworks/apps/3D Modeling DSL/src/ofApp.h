@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxAssimpModelLoader.h"
 
 class ofApp : public ofBaseApp
 {
@@ -12,7 +11,6 @@ private:
 	ofMaterial whiteDiffuse;
 
 	ofBoxPrimitive box;
-	ofxAssimpModelLoader fox;
 
 public:
 	void setup();
