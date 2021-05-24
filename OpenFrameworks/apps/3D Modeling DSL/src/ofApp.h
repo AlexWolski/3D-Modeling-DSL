@@ -5,6 +5,8 @@
 #include "ofMain.h"
 #include "MeshNode.h"
 #include "SampleModels.h"
+#include "Parser.h"
+#include "Interpreter.h"
 
 namespace ModelScript
 {
@@ -17,7 +19,8 @@ namespace ModelScript
 		shared_ptr<MeshNode> model;
 
 		void initializeScene();
-		static string loadFile(string filePath);
+		static std::string loadFile(std::string filePath);
+		static shared_ptr<MeshNode> generateModel(std::string script);
 
 	public:
 		void setup();

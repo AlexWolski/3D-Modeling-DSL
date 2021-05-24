@@ -9,8 +9,12 @@ using namespace tao::pegtl::parse_tree;
 
 namespace ModelScript
 {
-	class Parser
+	class Interpreter
 	{
-		static shared_ptr<MeshNode> execute(std::unique_ptr<node> AstRoot);
+	public:
+		static shared_ptr<MeshNode> execute(std::unique_ptr<node> AstRoot)
+		{
+			return nullptr;
+		}
 	};
 }

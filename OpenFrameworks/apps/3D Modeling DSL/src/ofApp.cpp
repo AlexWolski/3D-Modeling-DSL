@@ -31,7 +31,7 @@ namespace ModelScript
 	}
 
 	/// <summary>Reads in a file and returns the contents in a string</summary>
-	string ofApp::loadFile(string filePath)
+	std::string ofApp::loadFile(std::string filePath)
 	{
 		ifstream scriptFile(filePath);
 		stringstream buffer;
@@ -40,8 +40,22 @@ namespace ModelScript
 			throw "Unable to open file: '" + filePath + "'";
 
 		buffer << scriptFile.rdbuf();
+		std::string fileContents = buffer.str();
 
-		return buffer.str();
+		return fileContents;
+	}
+
+	/// <summary>Procedurally generates a model object from the given model script</summary>
+	shared_ptr<MeshNode> ofApp::generateModel(std::string scriptFile)
+	{
+		//Read the script from file
+		std::string scriptContents = loadFile(scriptFile);
+		//Parse the script into an AST
+		unique_ptr<node> AstRoot = Parser::parseScript(scriptContents.c_str());
+		//Interpret the AST and generate a model
+		shared_ptr<MeshNode> model = Interpreter::execute(move(AstRoot));
+
+		return model;
 	}
 
 	void ofApp::setup()
@@ -50,9 +64,7 @@ namespace ModelScript
 
 		//Create a house model that is 4 rooms wide and 2 stories high
 		model = SampleModels::houseModel(3, 2);
-
-		string test = loadFile("data/Scripts/test1.ms");
-		cout << test << endl;
+		//model = generateModel("data/Scripts/test1.ms");
 	}
 
 	void ofApp::draw()
