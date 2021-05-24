@@ -100,9 +100,10 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\addons\ofxAssimpModelLoader\libs;..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\addons\ofxAssimpModelLoader\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\addons\PEGTL 2.8.3\include\tao;src;..\..\addons\ofxAssimpModelLoader\libs;..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\addons\ofxAssimpModelLoader\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <ObjectFileName>$(IntDir)</ObjectFileName>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -120,10 +121,11 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\addons\ofxAssimpModelLoader\libs;..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\addons\ofxAssimpModelLoader\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\addons\PEGTL 2.8.3\include\tao;src;..\..\addons\ofxAssimpModelLoader\libs;..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\addons\ofxAssimpModelLoader\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -140,10 +142,11 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\addons\ofxAssimpModelLoader\libs;..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\addons\ofxAssimpModelLoader\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\addons\PEGTL 2.8.3\include\tao;src;..\..\addons\ofxAssimpModelLoader\libs;..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\addons\ofxAssimpModelLoader\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -163,9 +166,10 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\addons\ofxAssimpModelLoader\libs;..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\addons\ofxAssimpModelLoader\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\addons\PEGTL 2.8.3\include\tao;src;..\..\addons\ofxAssimpModelLoader\libs;..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\addons\ofxAssimpModelLoader\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <ObjectFileName>$(IntDir)</ObjectFileName>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -189,6 +193,185 @@
     <ClCompile Include="..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\analysis\analyze_cycles.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\analysis\counted.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\analysis\generic.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\analysis\grammar_info.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\analysis\insert_guard.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\analysis\rule_info.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\analysis\rule_type.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\analyze.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\apply_mode.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\argv_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\ascii.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\buffer_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\change_action.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\change_action_and_state.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\change_action_and_states.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\change_control.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\change_state.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\change_states.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\config.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\abnf.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\alphabet.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\changes.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\counter.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\http.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\icu\internal.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\icu\utf16.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\icu\utf32.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\icu\utf8.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\if_then.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\integer.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\json.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\json_pointer.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\parse_tree.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\parse_tree_to_dot.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\raw_string.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\remove_first_state.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\remove_last_states.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\rep_one_min_max.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\rep_string.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\shuffle_states.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\to_string.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\tracer.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\unescape.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\uri.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\cstream_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\disable_action.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\discard_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\discard_input_on_failure.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\discard_input_on_success.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\enable_action.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\eol.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\eol_pair.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\file_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\input_error.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\action.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\action_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\alnum.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\alpha.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\always_false.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\any.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\apply.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\apply0.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\apply0_single.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\apply_single.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\at.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\bof.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\bol.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\bump.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\bump_help.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\bytes.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\control.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\crlf_eol.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\cr_crlf_eol.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\cr_eol.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\cstream_reader.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\cstring_reader.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\demangle.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\demangle_cxxabi.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\demangle_nop.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\demangle_sanitise.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\disable.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\discard.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\duseltronik.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\dusel_mode.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\enable.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\endian.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\endian_gcc.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\endian_win.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\eof.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\eol.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\eolf.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\file_mapper_posix.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\file_mapper_win32.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\file_opener.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\file_reader.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\has_apply.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\has_apply0.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\has_match.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\identifier.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\if_apply.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\if_missing.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\if_must.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\if_must_else.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\if_then_else.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\input_pair.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\integer_sequence.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\istream_reader.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\istring.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\iterator.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\lf_crlf_eol.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\lf_eol.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\list.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\list_must.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\list_tail.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\list_tail_pad.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\marker.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\must.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\not_at.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\one.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\opt.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\pad.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\pad_opt.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\peek_char.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\peek_mask_uint.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\peek_mask_uint8.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\peek_uint.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\peek_uint8.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\peek_utf16.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\peek_utf32.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\peek_utf8.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\pegtl_string.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\plus.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\raise.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\range.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\ranges.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\read_uint.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\rematch.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\rep.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\rep_min.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\rep_min_max.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\rep_opt.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\require.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\result_on_found.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\rules.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\seq.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\skip_control.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\sor.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\star.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\star_must.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\state.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\string.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\trivial.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\try_catch_type.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\internal\until.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\istream_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\match.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\memory_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\mmap_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\normal.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\nothing.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\parse.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\parse_error.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\position.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\read_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\require_apply.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\require_apply0.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\rewind_mode.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\rules.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\string_input.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\tracking_mode.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\uint16.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\uint32.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\uint64.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\uint8.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\utf16.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\utf32.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\utf8.hpp" />
+    <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\version.hpp" />
     <ClInclude Include="src\MeshNode.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />
