@@ -26,6 +26,8 @@ void ofApp::setup()
 	backLight.setDiffuseColor(ofFloatColor::grey);
 	backLight.enable();
 
+	box = PrimitiveObject(ObjectNode::PrimitiveType::Box);
+
 	//Creating material
 	whiteDiffuse.setDiffuseColor(ofColor::white);
 }
