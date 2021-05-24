@@ -18,7 +18,6 @@ namespace ModelScript
 
 	public:
 		void setup();
-		void update();
 		void draw();
 	};
 }

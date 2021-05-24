@@ -38,11 +38,6 @@ namespace ModelScript
 		model = SampleModels::houseModel(3, 2);
 	}
 
-	void ofApp::update()
-	{
-
-	}
-
 	void ofApp::draw()
 	{
 		easyCam.begin();
