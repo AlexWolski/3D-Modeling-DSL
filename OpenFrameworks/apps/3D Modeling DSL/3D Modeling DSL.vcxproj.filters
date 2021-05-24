@@ -25,7 +25,7 @@
     <ClCompile Include="..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.cpp">
       <Filter>addons\ofxAssimpModelLoader\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\ObjectNode.cpp">
+    <ClCompile Include="src\MeshNode.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -209,7 +209,7 @@
     <ClInclude Include="..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\version.h">
       <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
     </ClInclude>
-    <ClInclude Include="src\ObjectNode.h">
+    <ClInclude Include="src\MeshNode.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

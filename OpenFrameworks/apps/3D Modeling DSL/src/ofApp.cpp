@@ -26,12 +26,7 @@ void ofApp::setup()
 	backLight.setDiffuseColor(ofFloatColor::grey);
 	backLight.enable();
 
-	box = make_shared<PrimitiveObject>(PrimitiveObject::Box);
-	box->getPointer();
-	shared_ptr<ObjectNode> test = make_shared<PrimitiveObject>(PrimitiveObject::IcoSphere);
-	test->setParent(box->getPointer());
-	test->scale(0.5f, 0.5f, 0.5f);
-	test->translate(0.0f, 50.0f, 0.0f);
+	box = make_shared<MeshNode>();
 
 	//Creating material
 	whiteDiffuse.setDiffuseColor(ofColor::white);
@@ -46,7 +41,12 @@ void ofApp::draw()
 {
 	easyCam.begin();
 	whiteDiffuse.begin();
+	box->rotateDeg(5.0f, glm::vec3(0.0f, 0.0f, 1.0f));
 	box->draw();
+	shared_ptr<MeshNode> test = make_shared<MeshNode>();
+	test->move(0.0f, 50.0f, 0.0f);
+	test->setScale(0.5f, 0.5f, 0.5f);
+	test->setParent(box);
 	whiteDiffuse.end();
 	easyCam.end();
 }

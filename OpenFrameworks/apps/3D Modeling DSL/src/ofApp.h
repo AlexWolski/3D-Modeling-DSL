@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ObjectNode.h"
+#include "MeshNode.h"
 
 class ofApp : public ofBaseApp
 {
@@ -10,7 +10,7 @@ private:
 	ofLight keyLight, backLight;
 	ofMaterial whiteDiffuse;
 
-	shared_ptr<ObjectNode> box;
+	shared_ptr<MeshNode> box;
 
 public:
 	void setup();
