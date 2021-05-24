@@ -1,37 +1,9 @@
 #include "ObjectNode.h"
 
-/// <summary>Converts a primitive type into an openFrameworks object</summary>
-of3dPrimitive ObjectNode::typeToObject(PrimitiveType type)
+/// <summary></summary>
+shared_ptr<ObjectNode> ObjectNode::getPointer()
 {
-	switch (type)
-	{
-	case PrimitiveType::Plane:
-		return ofBoxPrimitive();
-		break;
-
-	case PrimitiveType::Sphere:
-		return ofSpherePrimitive();
-		break;
-
-	case PrimitiveType::IcoSphere:
-		return ofIcoSpherePrimitive();
-		break;
-
-	case PrimitiveType::Cylinder:
-		return ofCylinderPrimitive();
-		break;
-
-	case PrimitiveType::Cone:
-		return ofConePrimitive();
-		break;
-
-	case PrimitiveType::Box:
-		return ofBoxPrimitive();
-		break;
-
-	default:
-		throw "There is no primitive shape with type: " + type;
-	}
+	return shared_from_this();
 }
 
 /// <summary>Moves the object and its children by an offset</summary>
@@ -58,13 +30,12 @@ void ObjectNode::scale(float x, float y, float z)
 void ObjectNode::addChild(shared_ptr<ObjectNode> child)
 {
 	children.push_back(child);
-	shared_ptr<ObjectNode> selfPointer = make_shared<ObjectNode>(*this);
-	child->setParent(selfPointer);
 }
 
 /// <summary>Inherit the transform stack of the given object node</summary>
 void ObjectNode::setParent(shared_ptr<ObjectNode> parent)
 {
+	parent->addChild(getPointer());
 	ofNode& parentNode = *(parent.get());
 	ofNode::setParent(parentNode);
 }
@@ -78,15 +49,51 @@ void ObjectNode::draw()
 
 
 
-/// <summary>Instantiates an object node containing a primitive model</summary>
-PrimitiveObject::PrimitiveObject(PrimitiveType type)
+/// <summary>Converts a primitive type into an openFrameworks object</summary>
+of3dPrimitive PrimitiveObject::typeToObject(Type type)
 {
+	switch (type)
+	{
+	case Type::Plane:
+		return ofBoxPrimitive();
+		break;
+
+	case Type::Sphere:
+		return ofSpherePrimitive();
+		break;
+
+	case Type::IcoSphere:
+		return ofIcoSpherePrimitive();
+		break;
+
+	case Type::Cylinder:
+		return ofCylinderPrimitive();
+		break;
+
+	case Type::Cone:
+		return ofConePrimitive();
+		break;
+
+	case Type::Box:
+		return ofBoxPrimitive();
+		break;
+
+	default:
+		throw "There is no primitive shape with type: " + type;
+	}
+}
+
+/// <summary>Instantiates an object node containing a primitive model</summary>
+PrimitiveObject::PrimitiveObject(Type type)
+{
+	ObjectNode::draw();
 	primitive = typeToObject(type);
 }
 
 /// <summary>Draws the primitive model</summary>
 void PrimitiveObject::draw()
 {
+	ObjectNode::draw();
 	primitive.drawFaces();
 }
 

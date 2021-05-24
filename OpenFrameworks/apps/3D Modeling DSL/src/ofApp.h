@@ -10,7 +10,7 @@ private:
 	ofLight keyLight, backLight;
 	ofMaterial whiteDiffuse;
 
-	ObjectNode box;
+	shared_ptr<ObjectNode> box;
 
 public:
 	void setup();

@@ -26,7 +26,12 @@ void ofApp::setup()
 	backLight.setDiffuseColor(ofFloatColor::grey);
 	backLight.enable();
 
-	box = PrimitiveObject(ObjectNode::PrimitiveType::Box);
+	box = make_shared<PrimitiveObject>(PrimitiveObject::Box);
+	box->getPointer();
+	shared_ptr<ObjectNode> test = make_shared<PrimitiveObject>(PrimitiveObject::IcoSphere);
+	test->setParent(box->getPointer());
+	test->scale(0.5f, 0.5f, 0.5f);
+	test->translate(0.0f, 50.0f, 0.0f);
 
 	//Creating material
 	whiteDiffuse.setDiffuseColor(ofColor::white);
@@ -41,7 +46,7 @@ void ofApp::draw()
 {
 	easyCam.begin();
 	whiteDiffuse.begin();
-	box.draw();
+	box->draw();
 	whiteDiffuse.end();
 	easyCam.end();
 }

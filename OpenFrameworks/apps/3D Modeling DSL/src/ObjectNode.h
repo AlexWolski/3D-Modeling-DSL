@@ -9,15 +9,12 @@
 using namespace std;
 
 //A node representing a transform and a list of objects inheriting that transform
-class ObjectNode : public ofNode
+class ObjectNode :
+	public ofNode,
+	public enable_shared_from_this<ObjectNode>
 {
 public:
-	enum PrimitiveType
-	{
-		Plane, Sphere, IcoSphere, Cylinder, Cone, Box
-	};
-
-	static of3dPrimitive typeToObject(PrimitiveType type);
+	shared_ptr<ObjectNode> getPointer();
 
 	void translate(float x, float y, float z);
 	void rotate(float x, float y, float z);
@@ -40,7 +37,14 @@ private:
 	of3dPrimitive primitive;
 
 public:
-	PrimitiveObject(PrimitiveType type);
+	enum Type
+	{
+		Plane, Sphere, IcoSphere, Cylinder, Cone, Box
+	};
+
+	static of3dPrimitive typeToObject(Type type);
+
+	PrimitiveObject(Type type);
 
 	void draw();
 };
