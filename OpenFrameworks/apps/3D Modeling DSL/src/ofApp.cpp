@@ -2,7 +2,8 @@
 
 namespace ModelScript
 {
-	void ofApp::setup()
+	/// <summary>Set the light, camera, and video settings</summary>
+	void ofApp::initializeScene()
 	{
 		//Set the video settings.
 		ofSetVerticalSync(true);
@@ -27,6 +28,11 @@ namespace ModelScript
 		backLight.setOrientation({ 15.0f, 15.0f, 0.0f });
 		backLight.setDiffuseColor(ofFloatColor::grey);
 		backLight.enable();
+	}
+
+	void ofApp::setup()
+	{
+		initializeScene();
 
 		//Create a house model that is 4 rooms wide and 2 stories high
 		model = SampleModels::houseModel(3, 2);

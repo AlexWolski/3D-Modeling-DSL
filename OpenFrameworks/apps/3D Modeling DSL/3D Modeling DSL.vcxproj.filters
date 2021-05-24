@@ -776,6 +776,12 @@
     <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\contrib\alphabet.hpp">
       <Filter>addons\PEGTL 2.8.3\include\tao\pegtl\contrib</Filter>
     </ClInclude>
+    <ClInclude Include="src\Parser.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Interpreter.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

@@ -372,6 +372,7 @@
     <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\utf32.hpp" />
     <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\utf8.hpp" />
     <ClInclude Include="..\..\addons\PEGTL 2.8.3\include\tao\pegtl\version.hpp" />
+    <ClInclude Include="src\Interpreter.h" />
     <ClInclude Include="src\MeshNode.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />
@@ -420,6 +421,7 @@
     <ClInclude Include="..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector2.h" />
     <ClInclude Include="..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector3.h" />
     <ClInclude Include="..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\version.h" />
+    <ClInclude Include="src\Parser.h" />
     <ClInclude Include="src\SampleModels.h" />
   </ItemGroup>
   <ItemGroup>

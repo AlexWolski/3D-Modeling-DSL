@@ -14,6 +14,8 @@ namespace ModelScript
 
 		shared_ptr<MeshNode> model;
 
+		void initializeScene();
+
 	public:
 		void setup();
 		void update();
