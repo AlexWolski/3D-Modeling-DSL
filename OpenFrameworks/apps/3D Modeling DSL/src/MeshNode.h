@@ -8,38 +8,41 @@
 
 using namespace std;
 
-enum class PrimitiveType
+namespace ModelScript
 {
-	Plane, Sphere, IcoSphere, Cylinder, Cone, Box
-};
+	enum class PrimitiveType
+	{
+		Plane, Sphere, IcoSphere, Cylinder, Cone, Box
+	};
 
-//A node representing a transform and a list of objects inheriting that transform
-class MeshNode :
-	public ofNode,
-	public enable_shared_from_this<MeshNode>
-{
-public:
-	MeshNode();
-	MeshNode(PrimitiveType type);
-	MeshNode(string modelPath);
-	MeshNode(const MeshNode& otherNode);
+	//A node representing a transform and a list of objects inheriting that transform
+	class MeshNode :
+		public ofNode,
+		public enable_shared_from_this<MeshNode>
+	{
+	public:
+		MeshNode();
+		MeshNode(PrimitiveType type);
+		MeshNode(string modelPath);
+		MeshNode(const MeshNode& otherNode);
 
-	MeshNode& operator=(const MeshNode& otherNode);
+		MeshNode& operator=(const MeshNode& otherNode);
 
-	shared_ptr<MeshNode> getPointer();
-	void addChild(shared_ptr<MeshNode> child);
-	void setParent(shared_ptr<MeshNode> parent);
-	void setMesh(shared_ptr<ofMesh> mesh);
-	void setColor(ofColor color);
+		shared_ptr<MeshNode> getPointer();
+		void addChild(shared_ptr<MeshNode> child);
+		void setParent(shared_ptr<MeshNode> parent);
+		void setMesh(shared_ptr<ofMesh> mesh);
+		void setColor(ofColor color);
 
-	void draw();
-	void customDraw() override;
+		void draw();
+		void customDraw() override;
 
-private:
-	static shared_ptr<ofMesh> loadPrimitive(PrimitiveType type);
-	static shared_ptr<ofMesh> loadModel(string modelPath);
+	private:
+		static shared_ptr<ofMesh> loadPrimitive(PrimitiveType type);
+		static shared_ptr<ofMesh> loadModel(string modelPath);
 
-	ofMaterial material;
-	shared_ptr<ofMesh> mesh = nullptr;
-	vector<shared_ptr<MeshNode>> children;
-};
+		ofMaterial material;
+		shared_ptr<ofMesh> mesh = nullptr;
+		vector<shared_ptr<MeshNode>> children;
+	};
+}
