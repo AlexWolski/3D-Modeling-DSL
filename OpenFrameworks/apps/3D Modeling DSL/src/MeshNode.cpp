@@ -33,8 +33,7 @@ void MeshNode::addChild(shared_ptr<MeshNode> child)
 void MeshNode::setParent(shared_ptr<MeshNode> parent)
 {
 	parent->addChild(getPointer());
-	ofNode& parentNode = *(parent.get());
-	ofNode::setParent(parentNode);
+	ofNode::setParent(*parent);
 }
 
 void MeshNode::setMesh(shared_ptr<ofMesh> mesh)
@@ -105,9 +104,6 @@ void MeshNode::draw()
 void MeshNode::customDraw()
 {
 	material.begin();
-
-	ofMesh& meshRef = *mesh.get();
-	ofGetCurrentRenderer()->draw(meshRef, OF_MESH_FILL);
-
+	ofGetCurrentRenderer()->draw(*mesh, OF_MESH_FILL);
 	material.end();
 }

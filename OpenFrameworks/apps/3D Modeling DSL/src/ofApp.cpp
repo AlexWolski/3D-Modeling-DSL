@@ -26,8 +26,8 @@ void ofApp::setup()
 	backLight.setDiffuseColor(ofFloatColor::grey);
 	backLight.enable();
 
-	box = make_shared<MeshNode>(PrimitiveType::Box);
-	box->setColor(ofColor::white);
+	//Create a house model that is 4 rooms wide and 2 stories high
+	model = SampleModels::houseModel(3, 2);
 }
 
 void ofApp::update()
@@ -38,6 +38,6 @@ void ofApp::update()
 void ofApp::draw()
 {
 	easyCam.begin();
-	box->draw();
+	model->draw();
 	easyCam.end();
 }

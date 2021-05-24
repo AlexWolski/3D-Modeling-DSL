@@ -237,6 +237,7 @@
     <ClInclude Include="..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector2.h" />
     <ClInclude Include="..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector3.h" />
     <ClInclude Include="..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\version.h" />
+    <ClInclude Include="src\SampleModels.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
