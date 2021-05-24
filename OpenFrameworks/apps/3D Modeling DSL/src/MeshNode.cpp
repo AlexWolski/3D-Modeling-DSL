@@ -17,6 +17,41 @@ MeshNode::MeshNode(string modelPath)
 	setMesh(loadModel(modelPath));
 }
 
+/// <summary>Create a deep copy of the given mesh node</summary>
+/// <remarks>Does not need to implement the copy and swap idiom as there are very few data members</remarks>
+MeshNode::MeshNode(const MeshNode& otherNode)
+{
+	*this = otherNode;
+}
+
+/// <summary>Deeply copy the values of the given mesh node</summary>
+MeshNode& MeshNode::operator=(const MeshNode& otherNode)
+{
+	//Call the base assignment operator
+	ofNode::operator=(otherNode);
+
+	//Copy the material and mesh
+	material = otherNode.material;
+
+	if (otherNode.mesh == nullptr)
+		mesh = nullptr;
+	else
+		mesh = make_shared<ofMesh>(*otherNode.mesh);
+
+	children.clear();
+
+	//Iteratively copy and add the children of the other node
+	//The 'this' keyword is used because shared_from_this is not yet defined in the constructor
+	for (shared_ptr<MeshNode> otherChild : otherNode.children)
+	{
+		shared_ptr<MeshNode> otherChildCopy = make_shared<MeshNode>(*otherChild);
+		otherChildCopy->ofNode::setParent(*this);
+		children.push_back(otherChildCopy);
+	}
+
+	return *this;
+}
+
 /// <summary>Returns a pointer to this object</summary>
 shared_ptr<MeshNode> MeshNode::getPointer()
 {

@@ -22,6 +22,9 @@ public:
 	MeshNode();
 	MeshNode(PrimitiveType type);
 	MeshNode(string modelPath);
+	MeshNode(const MeshNode& otherNode);
+
+	MeshNode& operator=(const MeshNode& otherNode);
 
 	shared_ptr<MeshNode> getPointer();
 	void addChild(shared_ptr<MeshNode> child);
@@ -37,6 +40,6 @@ private:
 	static shared_ptr<ofMesh> loadModel(string modelPath);
 
 	ofMaterial material;
-	shared_ptr<ofMesh> mesh;
+	shared_ptr<ofMesh> mesh = nullptr;
 	vector<shared_ptr<MeshNode>> children;
 };
