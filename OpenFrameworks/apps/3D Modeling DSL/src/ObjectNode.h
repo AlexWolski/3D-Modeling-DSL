@@ -16,10 +16,6 @@ class ObjectNode :
 public:
 	shared_ptr<ObjectNode> getPointer();
 
-	void translate(float x, float y, float z);
-	void rotate(float x, float y, float z);
-	void scale(float x, float y, float z);
-
 	void addChild(shared_ptr<ObjectNode> child);
 	void setParent(shared_ptr<ObjectNode> parent);
 

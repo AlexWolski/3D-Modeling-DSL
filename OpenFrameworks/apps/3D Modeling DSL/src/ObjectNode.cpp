@@ -6,26 +6,6 @@ shared_ptr<ObjectNode> ObjectNode::getPointer()
 	return shared_from_this();
 }
 
-/// <summary>Moves the object and its children by an offset</summary>
-void ObjectNode::translate(float x, float y, float z)
-{
-	ofNode::move(x, y, z);
-}
-
-/// <summary>Rotates the object on the x, y, and z axes by the given angles (in degrees.)</summary>
-void ObjectNode::rotate(float x, float y, float z)
-{
-	ofNode::tiltDeg(x);
-	ofNode::panDeg(y);
-	ofNode::rollDeg(z);
-}
-
-/// <summary>Scales each axis of the object by a percentage of the original scale</summary>
-void ObjectNode::scale(float x, float y, float z)
-{
-	ofNode::setScale(x, y, z);
-}
-
 /// <summary>Add a child object node that inherits this object's transform stack</summary>
 void ObjectNode::addChild(shared_ptr<ObjectNode> child)
 {
@@ -88,6 +68,7 @@ PrimitiveObject::PrimitiveObject(Type type)
 {
 	ObjectNode::draw();
 	primitive = typeToObject(type);
+	primitive.setParent(*this);
 }
 
 /// <summary>Draws the primitive model</summary>
