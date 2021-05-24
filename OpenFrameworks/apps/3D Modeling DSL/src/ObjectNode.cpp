@@ -58,7 +58,7 @@ void ObjectNode::scale(float x, float y, float z)
 void ObjectNode::addChild(shared_ptr<ObjectNode> child)
 {
 	children.push_back(child);
-	shared_ptr<ObjectNode> selfPointer = make_shared<ObjectNode>(this);
+	shared_ptr<ObjectNode> selfPointer = make_shared<ObjectNode>(*this);
 	child->setParent(selfPointer);
 }
 
