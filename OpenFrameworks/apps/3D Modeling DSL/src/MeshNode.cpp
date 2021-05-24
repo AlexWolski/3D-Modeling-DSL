@@ -17,23 +17,6 @@ MeshNode::MeshNode(string modelPath)
 	setMesh(loadModel(modelPath));
 }
 
-/// <summary>Draw the mesh and all children meshes with the proper transform</summary>
-void MeshNode::draw()
-{
-	if (mesh != nullptr)
-		ofGetCurrentRenderer()->draw(*this);
-
-	for (shared_ptr<MeshNode> childNode : children)
-		childNode->draw();
-}
-
-/// <summary>Draw the mesh without transforms</summary>
-void MeshNode::customDraw()
-{
-	ofMesh& meshRef = *mesh.get();
-	ofGetCurrentRenderer()->draw(meshRef, OF_MESH_FILL);
-}
-
 /// <summary>Returns a pointer to this object</summary>
 shared_ptr<MeshNode> MeshNode::getPointer()
 {
@@ -57,6 +40,11 @@ void MeshNode::setParent(shared_ptr<MeshNode> parent)
 void MeshNode::setMesh(shared_ptr<ofMesh> mesh)
 {
 	this->mesh = mesh;
+}
+
+void MeshNode::setColor(ofColor color)
+{
+	material.setDiffuseColor(color);
 }
 
 /// <summary>Instantiate a model of the specified primitive type</summary>
@@ -101,4 +89,25 @@ shared_ptr<ofMesh> MeshNode::loadModel(string modelPath)
 	shared_ptr<ofMesh> modelPointer = make_shared<ofMesh>(customMesh);
 
 	return modelPointer;
+}
+
+/// <summary>Draw the mesh and all children meshes with the proper transform</summary>
+void MeshNode::draw()
+{
+	if (mesh != nullptr)
+		ofGetCurrentRenderer()->draw(*this);
+
+	for (shared_ptr<MeshNode> childNode : children)
+		childNode->draw();
+}
+
+/// <summary>Draw the mesh without transforms</summary>
+void MeshNode::customDraw()
+{
+	material.begin();
+
+	ofMesh& meshRef = *mesh.get();
+	ofGetCurrentRenderer()->draw(meshRef, OF_MESH_FILL);
+
+	material.end();
 }

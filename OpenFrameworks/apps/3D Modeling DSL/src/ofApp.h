@@ -8,7 +8,6 @@ class ofApp : public ofBaseApp
 private:
 	ofEasyCam easyCam;
 	ofLight keyLight, backLight;
-	ofMaterial whiteDiffuse;
 
 	shared_ptr<MeshNode> box;
 

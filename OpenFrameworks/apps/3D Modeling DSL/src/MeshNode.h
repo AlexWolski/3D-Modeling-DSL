@@ -23,18 +23,20 @@ public:
 	MeshNode(PrimitiveType type);
 	MeshNode(string modelPath);
 
-	void draw();
-	void customDraw() override;
-
 	shared_ptr<MeshNode> getPointer();
 	void addChild(shared_ptr<MeshNode> child);
 	void setParent(shared_ptr<MeshNode> parent);
 	void setMesh(shared_ptr<ofMesh> mesh);
+	void setColor(ofColor color);
+
+	void draw();
+	void customDraw() override;
 
 private:
 	static shared_ptr<ofMesh> loadPrimitive(PrimitiveType type);
 	static shared_ptr<ofMesh> loadModel(string modelPath);
 
+	ofMaterial material;
 	shared_ptr<ofMesh> mesh;
 	vector<shared_ptr<MeshNode>> children;
 };

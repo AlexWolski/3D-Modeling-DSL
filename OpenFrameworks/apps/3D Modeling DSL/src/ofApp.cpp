@@ -27,9 +27,7 @@ void ofApp::setup()
 	backLight.enable();
 
 	box = make_shared<MeshNode>(PrimitiveType::Box);
-
-	//Creating material
-	whiteDiffuse.setDiffuseColor(ofColor::white);
+	box->setColor(ofColor::white);
 }
 
 void ofApp::update()
@@ -40,8 +38,6 @@ void ofApp::update()
 void ofApp::draw()
 {
 	easyCam.begin();
-	whiteDiffuse.begin();
 	box->draw();
-	whiteDiffuse.end();
 	easyCam.end();
 }
