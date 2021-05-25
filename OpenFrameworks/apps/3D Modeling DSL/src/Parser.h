@@ -49,20 +49,23 @@ namespace ModelScript
 		struct name : seq<not_at<keyword>, whitespace, identifier, whitespace> {};
 
 		struct function : if_must<name, openParen, closeParen, semicolon> {};
-		struct statement : seq<function> {};
+		struct statement : sor<function> {};
 		struct statementSeq : star<statement> {};
 		struct block : if_must<openBracket, statementSeq, closeBracket> {};
 
 		struct modelDeclaration : seq<whitespace, modelKey, name> {};
 		struct modelBlock : if_must<modelDeclaration, block> {};
 
-		struct grammar : must<modelBlock, eof> {};
+		struct expression : sor<statement, modelBlock> {};
+		struct program : star<expression> {};
+
+		struct grammar : must<program, eof> {};
 
 		// select which rules in the grammar will produce parse tree nodes:
 		template<typename Rule>
 		using selector = parse_tree::selector<
 			Rule,
-			parse_tree::store_content::on<statement, modelBlock>
+			parse_tree::store_content::on<statement, modelDeclaration>
 		>;
 
 	public:
