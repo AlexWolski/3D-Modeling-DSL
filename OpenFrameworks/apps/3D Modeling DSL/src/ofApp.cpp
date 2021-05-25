@@ -71,8 +71,8 @@ namespace ModelScript
 		initializeScene();
 
 		//Create a house model that is 4 rooms wide and 2 stories high
-		//model = SampleModels::houseModel(3, 2);
-		model = generateModel("data/Scripts/test1.ms");
+		model = SampleModels::houseModel(3, 2);
+		//model = generateModel("data/Scripts/test1.ms");
 	}
 
 	void ofApp::draw()

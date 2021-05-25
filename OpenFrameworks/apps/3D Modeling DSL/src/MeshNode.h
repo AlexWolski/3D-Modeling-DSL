@@ -23,7 +23,7 @@ namespace ModelScript
 	public:
 		MeshNode();
 		MeshNode(PrimitiveType type);
-		MeshNode(string modelPath);
+		MeshNode(std::string modelPath);
 		MeshNode(const MeshNode& otherNode);
 
 		MeshNode& operator=(const MeshNode& otherNode);
@@ -39,7 +39,7 @@ namespace ModelScript
 
 	private:
 		static shared_ptr<ofMesh> loadPrimitive(PrimitiveType type);
-		static shared_ptr<ofMesh> loadModel(string modelPath);
+		static shared_ptr<ofMesh> loadModel(std::string modelPath);
 
 		ofMaterial material;
 		shared_ptr<ofMesh> mesh = nullptr;
