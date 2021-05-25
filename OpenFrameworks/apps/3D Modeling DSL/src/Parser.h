@@ -35,10 +35,10 @@ namespace ModelScript
 		struct keyword : key<keywordStringList> {};
 
 
-
 		//Matches any number of spaces, tabs, or new lines
 		struct whitespace : star<space> {};
 
+		//Control structure characters
 		struct semicolon : seq<whitespace, one<';'>, whitespace> {};
 		struct openParen : seq<whitespace, one<'('>, whitespace> {};
 		struct closeParen : seq<whitespace, one<')'>, whitespace> {};
@@ -46,15 +46,20 @@ namespace ModelScript
 		struct closeBracket : seq<whitespace, one<'}'>, whitespace> {};
 
 		//Alphanumeric variable or function name
-		struct name : seq<not_at<keyword>, whitespace, identifier, whitespace> {};
+		struct name : seq<not_at<keyword>, whitespace, identifier> {};
 
-		struct function : if_must<name, openParen, closeParen, semicolon> {};
+		//Functions don't currently take any inputs
+		struct paramList : if_must<openParen, closeParen, semicolon> {};
+		//Match a function name and parameter list, but rewind the parameter list
+		struct funcitonName : if_must<name, at<paramList>> {};
+		struct function : if_must<funcitonName, paramList> {};
+
 		struct statement : sor<function> {};
 		struct statementSeq : star<statement> {};
 		struct block : if_must<openBracket, statementSeq, closeBracket> {};
 
-		struct modelDeclaration : seq<whitespace, modelKey, name> {};
-		struct modelBlock : if_must<modelDeclaration, block> {};
+		struct modelHeader : seq<whitespace, modelKey, name> {};
+		struct modelBlock : if_must<modelHeader, block> {};
 
 		struct expression : sor<statement, modelBlock> {};
 		struct program : star<expression> {};
@@ -65,7 +70,7 @@ namespace ModelScript
 		template<typename Rule>
 		using selector = parse_tree::selector<
 			Rule,
-			parse_tree::store_content::on<statement, modelDeclaration>
+			parse_tree::store_content::on<funcitonName, modelHeader>
 		>;
 
 	public:
