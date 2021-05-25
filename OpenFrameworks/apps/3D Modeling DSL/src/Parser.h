@@ -1,7 +1,9 @@
 #pragma once
 
+#include <iostream>
 #include <tao/pegtl.hpp>
 #include <tao/pegtl/contrib/parse_tree.hpp>
+#include <tao/pegtl/contrib/parse_tree_to_dot.hpp>
 
 using namespace tao::TAO_PEGTL_NAMESPACE;
 using namespace tao::pegtl::parse_tree;
@@ -18,24 +20,55 @@ namespace ModelScript
 
 		//All the keywords represented as strings
 		struct numberString : TAO_PEGTL_STRING("number") {};
-		struct moduleString : TAO_PEGTL_STRING("module") {};
+		struct modelString : TAO_PEGTL_STRING("model") {};
 		struct whileString  : TAO_PEGTL_STRING("while") {};
 
 		//All the keywords represented as key rules
 		struct numberKey : key<numberString> {};
-		struct moduleKey : key<moduleString> {};
+		struct modelKey : key<modelString> {};
 		struct whileKey  : key<whileString> {};
 
 		//A list of the keyword strings
-		struct keywordStringList : sor<numberString, moduleString, whileKey> {};
+		struct keywordStringList : sor<numberString, modelString, whileKey> {};
 
 		//A grammar rule that succeeds when the token does not match any keyword
 		struct keyword : key<keywordStringList> {};
 
+		//Matches any number of spaces, tabs, or new lines
+		struct whitespace : star<space> {};
+
+		struct openBracket : seq<whitespace, one<'{'>, whitespace> {};
+		struct closeBracket : seq<whitespace, one<'}'>, whitespace> {};
+
+		//Alphanumeric variable or function name
+		struct name : seq<not_at<keyword>, identifier> {};
+
+		struct modelBlock : if_must<whitespace, modelKey, whitespace, name, openBracket, closeBracket> {};
+
+		struct grammar : must<modelBlock, eof> {};
+
+		// select which rules in the grammar will produce parse tree nodes:
+		template<typename Rule>
+		using selector = parse_tree::selector<
+			Rule,
+			parse_tree::store_content::on<modelBlock>
+		>;
+
 	public:
-		static std::unique_ptr<node> parseScript(const char* script)
+		static std::unique_ptr<node> parseScript(std::string& script)
 		{
-			return nullptr;
+			memory_input<> parserInput(script, "Model Script");
+
+			try {
+				std::unique_ptr<node> AstRoot = parse_tree::parse<grammar, selector>(parserInput);
+				parse_tree::print_dot(std::cout, *AstRoot);
+
+				return std::move(AstRoot);
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
 		}
 	};
 }

@@ -48,14 +48,23 @@ namespace ModelScript
 	/// <summary>Procedurally generates a model object from the given model script</summary>
 	shared_ptr<MeshNode> ofApp::generateModel(std::string scriptFile)
 	{
-		//Read the script from file
-		std::string scriptContents = loadFile(scriptFile);
-		//Parse the script into an AST
-		unique_ptr<node> AstRoot = Parser::parseScript(scriptContents.c_str());
-		//Interpret the AST and generate a model
-		shared_ptr<MeshNode> model = Interpreter::execute(move(AstRoot));
+		try
+		{
+			//Read the script from file
+			std::string scriptContents = loadFile(scriptFile);
+			//Parse the script into an AST
+			unique_ptr<node> AstRoot = Parser::parseScript(scriptContents);
+			//Interpret the AST and generate a model
+			//shared_ptr<MeshNode> model = Interpreter::execute(move(AstRoot));
+			shared_ptr<MeshNode> model = make_shared<MeshNode>();
 
-		return model;
+			return model;
+		}
+		catch (exception e)
+		{
+			cerr << e.what() << endl;
+			return make_shared<MeshNode>();
+		}
 	}
 
 	void ofApp::setup()
@@ -63,8 +72,8 @@ namespace ModelScript
 		initializeScene();
 
 		//Create a house model that is 4 rooms wide and 2 stories high
-		model = SampleModels::houseModel(3, 2);
-		//model = generateModel("data/Scripts/test1.ms");
+		//model = SampleModels::houseModel(3, 2);
+		model = generateModel("data/Scripts/test1.ms");
 	}
 
 	void ofApp::draw()
