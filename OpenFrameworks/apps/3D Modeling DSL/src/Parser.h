@@ -34,16 +34,27 @@ namespace ModelScript
 		//A grammar rule that succeeds when the token does not match any keyword
 		struct keyword : key<keywordStringList> {};
 
+
+
 		//Matches any number of spaces, tabs, or new lines
 		struct whitespace : star<space> {};
 
+		struct semicolon : seq<whitespace, one<';'>, whitespace> {};
+		struct openParen : seq<whitespace, one<'('>, whitespace> {};
+		struct closeParen : seq<whitespace, one<')'>, whitespace> {};
 		struct openBracket : seq<whitespace, one<'{'>, whitespace> {};
 		struct closeBracket : seq<whitespace, one<'}'>, whitespace> {};
 
 		//Alphanumeric variable or function name
-		struct name : seq<not_at<keyword>, identifier> {};
+		struct name : seq<not_at<keyword>, whitespace, identifier, whitespace> {};
 
-		struct modelBlock : if_must<whitespace, modelKey, whitespace, name, openBracket, closeBracket> {};
+		struct function : if_must<name, openParen, closeParen, semicolon> {};
+		struct statement : seq<function> {};
+		struct statementSeq : star<statement> {};
+		struct block : if_must<openBracket, statementSeq, closeBracket> {};
+
+		struct modelDeclaration : seq<whitespace, modelKey, name> {};
+		struct modelBlock : if_must<modelDeclaration, block> {};
 
 		struct grammar : must<modelBlock, eof> {};
 
@@ -51,7 +62,7 @@ namespace ModelScript
 		template<typename Rule>
 		using selector = parse_tree::selector<
 			Rule,
-			parse_tree::store_content::on<modelBlock>
+			parse_tree::store_content::on<statement, modelBlock>
 		>;
 
 	public:
