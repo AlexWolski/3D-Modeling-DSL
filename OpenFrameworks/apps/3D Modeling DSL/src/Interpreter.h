@@ -14,7 +14,7 @@ namespace ModelScript
 	public:
 		static shared_ptr<MeshNode> execute(std::unique_ptr<node> AstRoot)
 		{
-			return nullptr;
+			return make_shared<MeshNode>();
 		}
 	};
 }

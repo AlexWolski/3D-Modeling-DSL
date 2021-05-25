@@ -55,8 +55,7 @@ namespace ModelScript
 			//Parse the script into an AST
 			unique_ptr<node> AstRoot = Parser::parseScript(scriptContents);
 			//Interpret the AST and generate a model
-			//shared_ptr<MeshNode> model = Interpreter::execute(move(AstRoot));
-			shared_ptr<MeshNode> model = make_shared<MeshNode>();
+			shared_ptr<MeshNode> model = Interpreter::execute(move(AstRoot));
 
 			return model;
 		}
