@@ -66,11 +66,19 @@ namespace ModelScript
 
 		struct grammar : must<program, eof> {};
 
+
+		struct rearrange : parse_tree::apply<rearrange>
+		{
+			template<typename... States>
+			static void transform(std::unique_ptr<parse_tree::node>& n, States&&... st) { }
+		};
+
 		// select which rules in the grammar will produce parse tree nodes:
 		template<typename Rule>
 		using selector = parse_tree::selector<
 			Rule,
-			parse_tree::store_content::on<funcitonName, modelHeader>
+			parse_tree::store_content::on<funcitonName, modelHeader>,
+			rearrange::on<modelBlock>
 		>;
 
 	public:
